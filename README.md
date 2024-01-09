@@ -4,7 +4,7 @@ This project is a simple calculator built with HTML, CSS, and JavaScript. It pro
 
 The calculator is designed to be user-friendly and responsive, making it easy to use on both desktop and mobile devices.
 
-Check out the live demo [here](<link to your live demo>).
+Check out the live demo [here](https://sankeer28.github.io/Simple-Calculator/).
 
 ## License
 
