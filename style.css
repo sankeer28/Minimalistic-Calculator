@@ -98,7 +98,7 @@ h1 {
     transition: all 0.3s ease;
     padding: 10px;
     border-radius: 5px;
-    width: 6%; 
+    width: auto; 
     margin: 10px auto;
 }
 
