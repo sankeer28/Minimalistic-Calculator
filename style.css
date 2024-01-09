@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(-45deg, darkblue, purple);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+}
+
+#main-content { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#navbar {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(173, 216, 230, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+#input, #output, button {
+    width: 70%; 
+    padding: 20px;
+    margin: 10px 10px 10px;
+    border-radius: 5px;
+    border: none;
+}
+#input, #output {
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+    font-size: 20px; 
+}
+button {
+    background-color: rgb(128, 128, 128, 0.5);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding: 10px; 
+}
+
+button:hover {
+    background-color: rgb(128, 128, 128, 0.7);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+#output {
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+    animation: appear 0.5s ease; 
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+
+#github-link {
+    display: inline-block;
+    background-color: rgb(128, 128, 128, 0.5);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    width: 6%; 
+    margin: 10px auto;
+}
+
+#github-link:hover {
+    background-color: rgb(128, 128, 128, 0.7);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
