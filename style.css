@@ -190,7 +190,8 @@ h1 {
     color: white; 
     font-size: 18px; 
     line-height: 1.6; 
-   
+    text-align: center;
+    padding-left: 10px; 
 }
 
 @keyframes slideDown {
@@ -214,11 +215,24 @@ h1 {
 }
 
 
-#main-content { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transition: height 0.5s ease; 
+#main-content #history-container {
+    max-height: 250px;
+    overflow-y: scroll;
+   
+}
+
+#main-content #history-container::-webkit-scrollbar {
+    width: 10px;
+    margin-right:4px;
+}
+
+#main-content #history-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: auto; 
+}
+
+#main-content #history-container::-webkit-scrollbar-track {
+    background: transparent;
 }
 
