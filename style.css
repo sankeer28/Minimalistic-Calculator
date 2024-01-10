@@ -25,11 +25,41 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 @keyframes gradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
 #container {
     display: flex;
     flex-direction: column;
@@ -39,8 +69,10 @@ html, body {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: shake 0.5s ease; 
 }
+
 #input, #output, button {
     width: 70%; 
     padding: 20px;
@@ -48,12 +80,14 @@ html, body {
     border-radius: 5px;
     border: none;
 }
+
 #input, #output {
     background-color: white;
     width: 70%;
     padding: 20px;
     font-size: 20px; 
 }
+
 button {
     background-color: rgb(128, 128, 128, 0.5);
     color: white;
@@ -61,6 +95,7 @@ button {
     font-size: 20px;
     transition: all 0.3s ease;
     padding: 10px; 
+    animation: pulse 2s infinite;
 }
 
 button:hover {
@@ -84,8 +119,8 @@ button:hover {
 h1 {
     color: white;
     font-size: 40px;
+    
 }
-
 
 #github-link {
     display: inline-block;
@@ -100,11 +135,90 @@ h1 {
     border-radius: 5px;
     width: auto; 
     margin: 10px auto;
+    animation: bounce 2s infinite;
 }
 
 #github-link:hover {
     background-color: rgb(128, 128, 128, 0.7);
     transform: scale(1.1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+#history-button {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(128, 128, 128, 0.5);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+}
+
+#history-button:hover {
+    background-color: rgb(128, 128, 128, 0.7);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#history-container {
+    display: none;
+    text-align: center;
+    background-color: rgb(173, 216, 230, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 70%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#history-container h2 {
+    color: white; 
+}
+
+#history-list {
+    list-style-type: none; 
+    color: white; 
+    font-size: 18px; 
+    line-height: 1.6; 
+   
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#history-list li {
+    animation: slideDown 0.5s ease;
+}
+
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+
+#main-content { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: height 0.5s ease; 
 }
 

@@ -4,22 +4,24 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 </head>
 <body>
     <div id="navbar"> 
         <a href="https://github.com/sankeer28/Simple-Calculator" id="github-link" class="button">GitHub</a>
     </div>
     <div id="main-content"> 
-    
-    <div id="container">
-        <h1>Calculator</h1>
-        <input id="input" type="text" placeholder="Enter calculation">
-        <button onclick="calculate()">Calculate</button>
-        <p id="output"></p>
+        <div id="container">
+            <h1>Calculator</h1>
+            <input id="input" type="text" placeholder="Enter calculation">
+            <button onclick="calculate()">Calculate</button>
+            <p id="output"></p>
+            <button id="history-button">Show History</button>
+            <div id="history-container">
+                <h2>History</h2>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
     </div>
-</div>
-
     <script src="script.js"></script>
 </body>
 </html>
